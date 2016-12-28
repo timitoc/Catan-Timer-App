@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+>
+
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:gravity="center_horizontal"
+            android:id="@+id/welcome_label"
+            android:text="Catan Timer"
+    />
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@id/welcome_label"
+    >
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+
+                android:orientation="horizontal" >
+
+            <com.example.CatanTimer.com.example.views.PlayerView
+                    android:id="@+id/player1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordered_background"
+                    android:layout_weight="1.0"
+                     />
+
+            <com.example.CatanTimer.com.example.views.PlayerView
+                    android:id="@+id/player2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordered_background"
+                    android:layout_weight="1.0"
+                     />
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:orientation="horizontal" >
+
+            <com.example.CatanTimer.com.example.views.PlayerView
+                    android:id="@+id/player4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordered_background"
+                    android:layout_weight="1.0"
+                    />
+
+            <com.example.CatanTimer.com.example.views.PlayerView
+                    android:id="@+id/player3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bordered_background"
+                    android:layout_weight="1.0"
+                     />
+
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/start_button"
+            android:layout_below="@+id/welcome_label"
+            android:layout_centerHorizontal="true"
+            android:text="START"
+    />
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/white"
+            >
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/roll_button"
+                android:layout_alignRight="@+id/roll_button"
+                android:id="@+id/next_button"
+                android:layout_centerHorizontal="true"
+                android:text="Next"
+        />
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/roll_button"
+                android:layout_below="@+id/next_button"
+                android:text="Roll the dices"
+        />
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/roll_button"
+                android:layout_alignLeft="@+id/roll_button"
+                android:layout_alignRight="@+id/roll_button"
+                android:weightSum="3">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"
+                android:id="@+id/d1"
+                      android:textAlignment="center"
+                      android:gravity="center"
+                      android:textSize="17sp"
+            />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"
+                android:id="@+id/d2"
+                      android:textAlignment="center"
+                      android:gravity="center"
+                      android:textSize="17sp"
+            />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"
+                android:background="@android:color/holo_red_dark"
+                      android:textAlignment="center"
+                      android:textSize="17sp"
+                      android:id="@+id/d3"
+            />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
+
